@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+
+<meta charset="UTF-8">
 <title>Calculadora</title>
 </head>
 <body>
-
 	
+	<div class="container">
+	
+		<form action="#" th:action="@{/resultado}" th:object="${calculadora}" method="POST">
+	
+		<p>Número 1: <input class="form-control" type="number" th:field="*{numero1}" value=""/></p>
+		<p>Número 2: <input class="form-control" type="number" th:field="*{numero2}" value=""/></p>
+		<p>Tipo de Operación: <input class="form-control" type="text" th:field="*{operacion}" maxlength="1" value=""/></p>
+		<p>
+			<input class="btn btn-success"type="submit" value="Calcular"/>
+			<input class="btn btn-danger" type="reset" value="Cancelar"/>
+		</p>
+	
+	</form>
+	
+	</div>
 
 </body>
 </html>

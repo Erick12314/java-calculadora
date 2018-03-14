@@ -23,37 +23,40 @@ public class CalculadoraController {
 		
 		double num1 = calculadora.getNumero1();
 		double num2 = calculadora.getNumero2();
+		String msj = "";
 		
 		switch (calculadora.getOperacion()) {
 		case '+':
-			calculadora.setResultado(num1 + num2);
+			msj = "La suma de " + num1 + " y " + num2 + " es : " + (num1 + num2);
 			break;
 		case '-':
-			calculadora.setResultado(num1 - num2);
+			msj = "La resta de " + num1 + " y " + num2 + " es : " + (num1 - num2);
 			break;
 		case '*':
-			calculadora.setResultado(num1 * num2);
+			msj = "La multiplicación de " + num1 + " y " + num2 + " es : " + (num1 * num2);
 			break;
 		case '/':
 			
 			//NO SE PUEDE DIVIDIR UN NUMERO ENTRE CERO
 			if (num2 != 0) {
 				
-				calculadora.setResultado(num1 / num2);
+				msj = "La división de " + num1 + " y " + num2 + " es : " + (num1 / num2);
 				
 			}else {
 				
-				
+				msj = "El segundo número debe ser diferente de cero";
 				
 			}
 			
 			break;
 		default:
 			
-			
+			msj = "Las operaciones válidas son suma (+), resta (-), multiplicación (*), divisón (/)";
 			
 			break;
 		}
+		
+		calculadora.setMensaje(msj);
 
 		return "result";
 	}

@@ -5,7 +5,7 @@ public class Calculadora {
 	private double numero1;
 	private double numero2;
 	private char operacion;
-	private double resultado;
+	private String mensaje;
 	
 	public double getNumero1() {
 		return numero1;
@@ -25,11 +25,11 @@ public class Calculadora {
 	public void setOperacion(char operacion) {
 		this.operacion = operacion;
 	}
-	public double getResultado() {
-		return resultado;
+	public String getMensaje() {
+		return mensaje;
 	}
-	public void setResultado(double resultado) {
-		this.resultado = resultado;
+	public void setMensaje(String mensaje) {
+		this.mensaje = mensaje;
 	}
 	
 }
